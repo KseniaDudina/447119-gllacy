@@ -30,40 +30,29 @@ a {
   vertical-align: middle;
   padding: 0 20px;
   border: none;
-
   background-image: linear-gradient(#e74a35, #f26843);
   box-shadow: 0 2px 2px 0 #ac1000;
   border-radius: 22px;
   cursor: pointer;
 }
 
-.button:hover {
-  font: inherit;
-  text-align: center;
-  color: #ffffff;
-  min-height: 45px;
-  vertical-align: middle;
-  padding: 0 20px;
-  border: none;
+.big-button {
+  min-height: 63px;
+  font-size: 32px;
+  line-height: 44px;
+}
 
+.button:hover,
+.big-button:hover {
+  border: none;
   background-image: linear-gradient(#f58669, #ec6f5e);
-  box-shadow: 0 2px 2px 0 #ac1000;
-  border-radius: 22px;
   cursor: pointer;
 }
 
-.button:active {
-  font: inherit;
-  text-align: center;
-  color: #ffffff;
-  min-height: 45px;
-  vertical-align: middle;
-  padding: 0 20px;
+.button:active,
+.big-button:active {
   border: none;
-
   background-image: linear-gradient(#f26843, #e74a35);
-  box-shadow: inset 0 2px 2px 0 #ac1000;
-  border-radius: 22px;
   cursor: pointer;
 }
 
@@ -73,11 +62,12 @@ a {
   font-size: 16px;
   line-height: 18px;
   margin: 0 auto;
-  /*padding: 9px 53px;*/
   color: #ffffff;
+  z-index: 1;
+
 }
 
-.main-header-logo{
+.main-header-logo {
   width: 154px;
   height: 64px;
   padding: 9px 0;
@@ -94,7 +84,7 @@ a {
   margin-left: auto;
 }
 
-.site-navigation{
+.site-navigation {
   padding-left: 10px;
 }
 
@@ -124,11 +114,10 @@ a {
 }
 
 .container {
-  width: 1200px;
+  width: 1146px;
   margin: 0 auto;
   padding: 0 27px;
 }
-
 
 input[name="slider"] {
   display: none;
@@ -141,6 +130,7 @@ input[name="slider"] {
   padding-bottom: 50px;
   text-align: center;
   color: #ffffff;
+  z-index: -1;
 }
 
 .slides .title {
@@ -148,7 +138,7 @@ input[name="slider"] {
   display: inline-block;
   width: 780px;
   top: 398px;
-  left:50%;
+  left: 50%;
   margin-left: -390px;
 
   font-size: 60px;
@@ -157,17 +147,19 @@ input[name="slider"] {
 }
 
 .breadcrumbs {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
   display: flex;
   list-style: none;
   padding-left: 0;
 }
 
-
-.breadcrumbs li:not(:first-child){
+.breadcrumbs li:not(:first-child) {
 
 }
 
-.breadcrumbs li:not(:first-child)::before{
+.breadcrumbs li:not(:first-child)::before {
   content: "»";
   padding-left: 8px;
   padding-right: 8px;
@@ -182,7 +174,7 @@ input[name="slider"] {
 }
 
 .filters legend {
-
+  padding: 0;
   font-size: 14px;
   line-height: 16px;
 
@@ -191,44 +183,44 @@ input[name="slider"] {
 .filters fieldset {
   position: relative;
   display: inline-block;
+  align-items: center;
   border: none;
   padding: 0;
+  min-height: 36px;
 }
 
 .filters fieldset:not(:first-child) {
   font-size: 16px;
   line-height: 18px;
-  background-color: rgba(255,255,255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 18px;
 }
 
-.filters select{
+.filters select {
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   color: #fff;
   font-size: 16px;
-  line-height:  18px;
+  line-height: 18px;
   padding: 8px 16px;
   border-radius: 18px;
 }
 
-.filters label{
- /*position: absolute;*/
+.filters label {
+  /*position: absolute;*/
   display: inline-block;
   padding: 8px 16px;
 }
 
 .filters input[type="submit"] {
   background-color: rgba(255, 255, 255, 0.2);
-  border:2px solid #fff ;
+  border: 2px solid #fff;
   color: #fff;
   font-size: 16px;
-  line-height:  18px;
+  line-height: 18px;
   padding: 8px 30px;
   border-radius: 18px;
 }
-
-
 
 .controls {
   position: absolute;
@@ -243,7 +235,12 @@ input[name="slider"] {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 40px;
-  padding: 0 27px;
+}
+
+.offer h3 {
+  font-size: 35px;
+  line-height: 41px;
+  margin: 0;
 }
 
 .ruspberry,
@@ -264,14 +261,13 @@ input[name="slider"] {
   background-image: url("../img/choco.jpg");
 }
 
-
 .catalog {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
-  padding: 0px 27px;
+  padding: 0;
 }
 
 .catalog-item {
@@ -279,17 +275,22 @@ input[name="slider"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 267px;
+  width: 22.2%;
   min-height: 405px;
+}
+
+.catalog-item button {
+  display: none;
 }
 
 .hit {
   position: absolute;
-  top:0px;
-  left:0px;
+  top: 0px;
+  left: 0px;
 }
 
 .catalog-item:hover {
+  padding: 6px 13px;
   border-radius: 5px;
   background-color: rgba(248, 247, 244, 0.2);
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
@@ -302,12 +303,12 @@ input[name="slider"] {
   min-height: 306px;
   border-radius: 13px;
   padding: 20px;
-  margin:0 auto;
+  margin: 0 auto;
   margin-bottom: 40px;
   background-image: url("../img/waffel.jpg");
 }
 
-.articles{
+.articles {
   display: flex;
   justify-content: space-around;
   margin-bottom: 40px;
@@ -382,7 +383,7 @@ input[name="slider"] {
 
 .pagination:after {
   content: "";
-  width:9px;
+  width: 9px;
   height: 9px;
   border-top: 1px solid #fff;
   border-right: 1px solid #fff;
@@ -391,20 +392,20 @@ input[name="slider"] {
 
 .pagination:before {
   content: "";
-  width:9px;
+  width: 9px;
   height: 9px;
   border-top: 1px solid #fff;
   border-left: 1px solid #fff;
   transform: rotate(-45deg);
 }
 
-.pagination a{
+.pagination a {
   text-decoration: none;
   padding: 5px 10px;
 
 }
 
-.pagination a:not([href]){
+.pagination a:not([href]) {
   list-style: none;
   padding: 6px 10px;
   color: #323232;
@@ -422,6 +423,12 @@ input[name="slider"] {
   padding: 30px 25px;
   border-radius: 13px;
   background-color: rgba(255, 255, 255, 0.98);
+}
+.main-footer{
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 
