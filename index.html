@@ -9,10 +9,13 @@
 </head>
 <body>
 
-<div class="site-wrapper">
+<input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+<input class="visually-hidden" type="radio" id="product-2" name="toggle">
+<input class="visually-hidden" type="radio" id="product-3" name="toggle">
 
-  <header class="main-header">
-    <div class="container">
+<div class="site-wrapper">
+  <div class="container">
+    <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo">
           <img src="img/svg-gllacy/logo.svg" width="154" height="64" alt="Логотип магазина мороженного GllacyShop">
@@ -36,74 +39,68 @@
           <li class="user-cart"><a href="#">Пусто</a></li>
         </ul>
       </nav>
+    </header>
 
-      <!--<section class="modal login">-->
-      <!--<h2 class="visually-hidden">Личный кабинет</h2>-->
-      <!--<form action="http://echo.htmlacademy.ru" method="post">-->
-      <!--<input type="text" name="email" placeholder="Электронная почта">-->
-      <!--<input type="password" name="password" placeholder="Пароль">-->
-      <!--<input type="submit" value="Войти">-->
-      <!--</form>-->
+    <!--<section class="modal login">-->
+    <!--<h2 class="visually-hidden">Личный кабинет</h2>-->
+    <!--<form action="http://echo.htmlacademy.ru" method="post">-->
+    <!--<input type="text" name="email" placeholder="Электронная почта">-->
+    <!--<input type="password" name="password" placeholder="Пароль">-->
+    <!--<input type="submit" value="Войти">-->
+    <!--</form>-->
 
-      <!--<a href="#">Забыли пароль?</a>-->
-      <!--<a href="#">Новая регистрация</a>-->
-      <!--</section>-->
+    <!--<a href="#">Забыли пароль?</a>-->
+    <!--<a href="#">Новая регистрация</a>-->
+    <!--</section>-->
 
-      <!--<section class="modal search">-->
-      <!--<h2 class="visually-hidden">Поиск</h2>-->
-      <!--<input type="text" placeholder="Что ищем?">-->
-      <!--</section>-->
+    <!--<section class="modal search">-->
+    <!--<h2 class="visually-hidden">Поиск</h2>-->
+    <!--<input type="text" placeholder="Что ищем?">-->
+    <!--</section>-->
 
-      <!--<section class="modal feedback">-->
-      <!--<h2>Мы обязательно вам ответим!</h2>-->
-      <!--<form action="http://echo.htmlacademy.ru" method="post">-->
-      <!--<input type="text" name="your-name" placeholder="Как вас зовут?">-->
-      <!--<input type="text" name="your-email" placeholder="Ваша почта для ответа?">-->
-      <!--<textarea name="some-message" rows="10" cols="30" placeholder="Напишите что-нибудь..."></textarea>-->
-      <!--<input type="submit" value="Отправить">-->
-      <!--</form>-->
-      <!--</section>-->
-    </div>
-  </header>
+    <!--<section class="modal feedback">-->
+    <!--<h2>Мы обязательно вам ответим!</h2>-->
+    <!--<form action="http://echo.htmlacademy.ru" method="post">-->
+    <!--<input type="text" name="your-name" placeholder="Как вас зовут?">-->
+    <!--<input type="text" name="your-email" placeholder="Ваша почта для ответа?">-->
+    <!--<textarea name="some-message" rows="10" cols="30" placeholder="Напишите что-нибудь..."></textarea>-->
+    <!--<input type="submit" value="Отправить">-->
+    <!--</form>-->
+    <!--</section>-->
+  </div>
 
 
   <main class="container">
+
     <h1 class="visually-hidden">Магазин мороженного GllacyShop</h1>
     <section class="slider">
       <h2 class="visually-hidden">Надо брать!</h2>
 
-      <input type="radio" name="slider" id="slider-input-1" checked>
-      <input type="radio" name="slider" id="slider-input-2">
-      <input type="radio" name="slider" id="slider-input-3">
-
-
-      <div class="slider">
-        <div class="slides">
-          <div class="slide"><img src="img/slider-1.png" alt="Крем-брюле и пломбир с малиновым джемом">
-            <div class="title">Крем-брюле
-              и пломбир с малиновым джемом
-            </div>
-            <button class="button big-button">Дайте оба!</button>
-          </div>
-          <!--<div class="slide"><img src="img/slider-2.png" alt="Шоколадный пломбир и лимонный сорбет">-->
-            <!--<div class=" title">Шоколадный-->
-              <!--пломбир и лимонный сорбет-->
-            <!--</div>-->
-            <!--<button class="button big-button">Дайте оба!</button>-->
-          <!--</div>-->
-          <!--<div class="slide"><img src="img/slider-3.png" alt="Пломбир с помадкой и клубничный щербет">-->
-            <!--<div class="title">Пломбир с-->
-              <!--помадкой и клубничный щербет-->
-            <!--</div>-->
-            <!--<button class="button big-button">Дайте оба!</button>-->
-          <!--</div>-->
+        <div class="slider-controls">
+          <label for="product-1">Первый</label>
+          <label for="product-2">Второй</label>
+          <label for="product-3">Третий</label>
         </div>
-      </div>
-      <div class="controls">
-        <label for="slider-input-1"></label>
-        <label for="slider-input-2"></label>
-        <label for="slider-input-3"></label>
-      </div>
+        <ul class="slider-list">
+          <li class="slider-item slide" id="slide1">
+            <h3 class="slide-title">
+              Крем-брюле и пломбир с малиновым джемом
+            </h3>
+            <a class="button slide-button" href="#">Давайте оба!</a>
+          </li>
+          <li class="slider-item slide" id="slide2">
+            <h3 class="slide-title">
+              Шоколадный пломбир и лимонный сорбет
+            </h3>
+            <a class="button slide-button" href="#">Давайте оба!</a>
+          </li>
+          <li class="slider-item slide" id="slide3">
+            <h3 class="slide-title">
+              Пломбир с помадкой и клубничный щербет
+            </h3>
+            <a class="button slide-button" href="#">Давайте оба!</a>
+          </li>
+        </ul>
 
     </section>
 
@@ -112,7 +109,7 @@
       <div class="ruspberry">
         <h3>Малинка даром!</h3>
         <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-        <button class="button">Хочу варенье!</button>
+        <button class="button small-button">Хочу варенье!</button>
       </div>
 
 
@@ -120,7 +117,7 @@
         <h3>Шоколадки даром!</h3>
         <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно
           бесплатно.</p>
-        <button class="button">Хочу шоколадки!</button>
+        <button class="button small-button">Хочу шоколадки!</button>
       </div>
     </section>
 
@@ -132,28 +129,28 @@
           <img src="img/catalog-1.png" height="267" width="267" alt="сливочная мороженка">
           <h3 class="price">310<span>/кг</span></h3>
           <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-          <button class="button">Быстрый просмотр</button>
+          <button class="button small-button">Быстрый просмотр</button>
         </li>
         <li class="catalog-item">
           <img class="hit" src="img/bestseller.png">
           <img src="img/catalog-2.png" height="267" width="267" alt="сливочно-кофейная мороженка">
           <h3 class="price">380<span>/кг</span></h3>
           <p>Сливочно-кофейное с кусочками шоколада</p>
-          <button class="button">Быстрый просмотр</button>
+          <button class="button small-button">Быстрый просмотр</button>
         </li>
         <li class="catalog-item">
           <img class="hit" src="img/bestseller.png">
           <img src="img/catalog-3.png" height="267" width="267" alt="сливочно-клубничная мороженка">
           <h3 class="price">355<span>/кг</span></h3>
           <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
-          <button class="button">Быстрый просмотр</button>
+          <button class="button small-button">Быстрый просмотр</button>
         </li>
         <li class="catalog-item">
           <img class="hit" src="img/bestseller.png">
           <img src="img/catalog-4.png" height="267" width="267" alt="скрем-брюле с карамелькой">
           <h3 class="price">380<span>/кг</span></h3>
           <p>Сливочное крем-брюле с карамельной подливкой</p>
-          <button class="button">Быстрый просмотр</button>
+          <button class="button small-button">Быстрый просмотр</button>
         </li>
       </ul>
     </section>
@@ -194,7 +191,7 @@
             не спамить и не слать всякой ненужной ерунды. Честно =) </p>
           <form action="http://echo.htmlacademy.ru" method="post">
             <input type="text" name="email-for-subscription" placeholder="Электронная почта">
-            <input type="submit" value="Отправить">
+            <input class="button small-button" type="submit" value="Отправить">
           </form>
         </div>
       </article>
@@ -206,7 +203,7 @@
         <p class="addres">Адрес главного офиса и офлайн-магазина: <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
         </p>
         <p class="phone">Для заказов по телефону: <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
-        <button class="button">Форма обратной связи</button>
+        <button class="button small-button">Форма обратной связи</button>
       </div>
     </section>
 
